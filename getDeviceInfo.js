@@ -153,7 +153,7 @@ var DeviceInfo = (function () {
                     fingerprint: MethodLibrary.createFingerprint(params.domain), // 浏览器指纹
                     orientation: MethodLibrary.getOrientationStatu() // 横竖屏
                 }
-                if (!params.info) {
+                if (!params.info || params.info.length == 0) {
                     return info;
                 } else {
                     var infoTemp = {};
