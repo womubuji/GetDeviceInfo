@@ -5,21 +5,6 @@ var DeviceInfo = (function () {
              * @function 监测DOM树是否加载完毕.
              * @param fn
              */
-            domReady: function (fn) {
-                if (document.addEventListener) { // 标准浏览器
-                    document.addEventListener('DOMContentLoaded', function () { //注销时间，避免重复触发
-                        document.removeEventListener('DOMContentLoaded', arguments.callee, false);
-                        fn(); // 运行函数
-                    }, false);
-                } else if (document.attachEvent) { // IE浏览器
-                    document.attachEvent('onreadystatechange', function () {
-                        if (document.readyState == 'complete') {
-                            document.detachEvent('onreadystatechange', arguments.callee);
-                            fn(); // 函数运行
-                        }
-                    });
-                }
-            },
             getOS: function () { //获取当前操作系统
                 var os;
                 if (navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Linux') > -1) {
@@ -170,7 +155,6 @@ var DeviceInfo = (function () {
             }
         }
     })();
-    MethodLibrary.domReady(LogicLibrary.DeviceInfoObj);
     return {
         getDeviceInfo: function (params) {
             return LogicLibrary.DeviceInfoObj(params);
