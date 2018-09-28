@@ -142,7 +142,7 @@ var DeviceInfo = (function () {
                     return info;
                 } else {
                     var infoTemp = {};
-                    for (i in info) {
+                    for (var i in info) {
                         params.info.forEach(function (item) {
                             if (item.toLowerCase() == i.toLowerCase()) {
                                 item = i;
