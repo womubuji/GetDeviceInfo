@@ -64,7 +64,7 @@ var DeviceInfo = (function () {
                 }
                 return deviceType;
             },
-            getNetWork: function () {
+            getNetWork: function () { // 获取网络状态
                 var netWork;
                 switch (navigator.connection.effectiveType) {
                     case 'wifi':
