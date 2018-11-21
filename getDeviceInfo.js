@@ -64,7 +64,7 @@ var DeviceInfo = (function () {
                 }
                 return deviceType;
             },
-            getNetWork: function () {
+            getNetWork: function () { // 获取网络状态
                 var netWork;
                 switch (navigator.connection.effectiveType) {
                     case 'wifi':
@@ -142,7 +142,7 @@ var DeviceInfo = (function () {
                     return info;
                 } else {
                     var infoTemp = {};
-                    for (i in info) {
+                    for (var i in info) {
                         params.info.forEach(function (item) {
                             if (item.toLowerCase() == i.toLowerCase()) {
                                 item = i;
