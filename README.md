@@ -12,7 +12,7 @@
  - fingerprint: 浏览器指纹
  - orientation: 横竖屏
 
- 调用方式：
+ > #### 调用方式：
  ```
     document.write(JSON.stringify(DeviceInfo.getDeviceInfo(
          {
