@@ -2,7 +2,7 @@
 
 git filter-branch --env-filter '
 
-OLD_EMAIL="1374544236@qq.com"
+OLD_EMAIL="liyafei@192.168.0.103"
 CORRECT_NAME="skillnull"
 CORRECT_EMAIL="skillisnull@gmail.com"
 
